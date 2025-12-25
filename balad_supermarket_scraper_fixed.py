@@ -1,5 +1,3 @@
-#!/usr/bin/env python3
-# -*- coding: utf-8 -*-
 """
 Balad.ir Supermarket Scraper - FIXED VERSION
 استخراج تمام سوپرمارکت‌های یک شهر از سایت بلد
@@ -12,7 +10,7 @@ from typing import List, Dict, Optional
 import sys
 
 class BaladSupermarketScraper:
-    # دیکشنری تبدیل نام فارسی شهر به slug انگلیسی در URL
+  
     CITY_SLUGS = {
         "تهران": "tehran",
         "اصفهان": "esfahan",
@@ -60,8 +58,8 @@ class BaladSupermarketScraper:
         self.all_supermarkets = []
     
     def _get_city_slug(self, city: str) -> str:
-        """تبدیل نام شهر به slug مورد استفاده در URL بلد"""
-        # اگر کاربر مستقیماً slug انگلیسی وارد کرد
+      
+        
         if city.lower() in self.CITY_SLUGS.values():
             return city.lower()
         
